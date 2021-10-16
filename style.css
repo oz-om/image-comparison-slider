@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+:root {
+  --value : 0px;
+}
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 90vw;
+  min-width: 80vmin;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px 0;
+  box-shadow: 0 0 20px 2px #d0d0d0;
+  margin: 20px auto;
+  display: grid;
+  place-items: center;
+  margin: auto;
+  position: relative;
+}
+img {
+  width: 440px;
+}
+.main {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.images {
+  width: 440px;
+  height: 247px;
+  position: relative;
+}
+.images > div {
+  overflow: hidden;
+  position: absolute;
+}
+.images:after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: #BC7A00C4;
+  border-radius: 5px;
+  left: var(--value);
+}
+.img1 > img {
+  filter: blur(3px)
+}
+
+.img2 {
+  width: var(--value);
+}
+
+.slid input {
+  width: 100%;
+  appearance: none;
+  position: relative;
+}
+.slid input::-webkit-slider-runnable-track{
+  appearance: none;
+  height: 3px;
+  width: 103%;
+  left: -3px;
+  background-color: transparent;
+  position: absolute;
+  margin-top: -30px;
+  z-index: 4;
+}
+.slid input::-webkit-slider-thumb {
+  appearance: none;
+  margin-top: -10px;
+  z-index: 5;
+  background-color: #00BCB5;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
